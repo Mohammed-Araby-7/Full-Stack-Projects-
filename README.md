@@ -8,6 +8,7 @@ This project demonstrates frontend development skills using **HTML, CSS, JavaScr
 ---
 
 ## 🧩 Project Overview
+<img width="1853" height="936" alt="Screenshot 2025-11-02 154819" src="https://github.com/user-attachments/assets/cbaee62d-cc1a-4a65-804f-c81c9e0c544a" />
 
 The **Khadueo Food Delivery** website was designed with a clean structure, smooth navigation, and optimized performance.  
 It focuses on **real-world workflow simulation**, using mock APIs to represent restaurant data, menu items, and orders.
