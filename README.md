@@ -1,6 +1,5 @@
 # 🍔 Khadueo – Restaurant Food Delivery Frontend
 
-![Khadueo Homepage](./Photos/homepage.png)
 
 Khadueo is a modern and responsive **food delivery web application** that provides users with an elegant interface to browse restaurants, explore dishes, and place food delivery orders online.
 
