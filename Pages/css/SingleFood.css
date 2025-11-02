@@ -1,0 +1,563 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+
+.header {
+  background: url("../Photos/FoodpageBG.png") center/cover no-repeat;
+  color: #fff;
+  padding: 20px 40px;
+}
+
+/* ---------- Top Row ---------- */
+.top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.logo img {
+  width: 100px;
+}
+
+/* ---------- Navigator ---------- */
+.navigator ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.navigator ul li {
+  position: relative;
+}
+
+.navigator a {
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.navigator a:hover {
+  color: #ffb703;
+}
+
+/* ---------- Dropdown (TheHidden structure) ---------- */
+.TheHidden {
+  display: none;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background-color: #dc3545;
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 100;
+  min-width: 220px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.TheHidden .content {
+  display: flex;
+  flex-direction: column;
+}
+
+.TheHidden .content a {
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 14px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.TheHidden .content a:hover {
+  background-color: #ffb703;
+  color: #000;
+}
+
+
+/* Show dropdown on hover */
+.navigator li:hover .TheHidden {
+  display: block;
+  animation: slideDown 0.3s ease-in-out;
+}
+
+
+
+/* Smooth dropdown animation */
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- Right Icons ---------- */
+.right-icons {
+  gap: 10px;
+}
+
+.right-icons img {
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+}
+
+.btn-login {
+  background-color: #dc3545;
+  color: #000;
+  border: none;
+  padding: 20px 40px;
+  border-radius: 20px;
+  font-weight: 600;
+  margin-left: 10px;
+  transition: 0.3s ease;
+}
+
+.btn-login:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* ---------- Title Row ---------- */
+.title-row {
+  margin-top: 50px;
+}
+
+.title-row h4 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.title-row span {
+  color: #ffb703;
+  font-weight: 500;
+}
+
+
+
+/* Recipe */
+/* Container Section */
+
+
+
+/* Left Side */
+.big-img {
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.thumb {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  border-radius: 8px;
+}
+
+.thumb:hover {
+  transform: scale(1.05);
+}
+
+/* Right Side */
+.dish-title {
+  font-size: 3em;
+  color: #2A435D !important;
+}
+
+.price {
+  color: #e74c3c;
+}
+
+.old-price {
+  font-size: 14px;
+}
+
+.dish-desc {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.range-input {
+  accent-color: #e74c3c;
+}
+
+.btn-add {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+.btn-add:hover {
+  background-color: #c0392b;
+}
+
+/* ============ Quantity Selector ============ */
+.qty-selector {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+  margin-bottom: 10px;
+}
+
+.qty-selector input[type="number"] {
+  width: 60px;
+  text-align: center;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  outline: none;
+  background: transparent;
+  appearance: textfield;
+}
+
+.qty-selector input::-webkit-outer-spin-button,
+.qty-selector input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Quantity Buttons */
+.btn-qty {
+  border: none;
+  background-color: #007bff; /* blue */
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  width: 35px ;
+  height: 35px ;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.btn-qty:hover {
+  background-color: #0056b3;
+}
+
+/* Info under quantity */
+.product-info {
+  margin-top: 8px;
+}
+
+.product-info .size,
+.product-info .stock {
+  display: block;
+  font-size: 14px;
+  color: #555;
+}
+
+
+/* ===== Tabs Section ===== */
+ .tabs-section {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px ;
+  max-width: 800px;
+  margin: 40px auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
+
+/* ===== Tab Buttons ===== */
+.tab-buttons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  border-bottom: 2px solid #eee;
+  margin-bottom: 20px;
+  
+}
+
+.tab-buttons .tab-btn {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #333;
+  transition: all 0.3s ease;
+  border-bottom: 3px solid transparent;
+}
+
+.tab-btn:hover {
+  color: #ff6600;
+}
+
+/* Tabs */
+.tabs-section {
+  margin-top: 40px;
+  border-top: 2px solid #eee;
+  padding-top: 20px;
+}
+
+.tab-buttons {
+  display: flex;
+  gap: 10px;
+  border-bottom: 2px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  background: transparent;
+  border: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #2a435d;
+  border-radius: 4px 4px 0 0;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.tab-btn:hover,
+.tab-btn.active {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.tab-content {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.tab-content.active {
+  display: block;
+  opacity: 1;
+}
+
+/* Table */
+.burger-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.burger-table th,
+.burger-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.burger-table th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+}
+
+.burger-table td:first-child {
+  text-align: left;
+  font-weight: 600;
+}
+
+/* Fade animation */
+.fade {
+  animation: fadeIn 0.5s ease-in-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+/* Toast Styles */
+/* === Toast Message === */
+.toast {
+  position: fixed;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #28a745;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  font-weight: 500;
+  transition: top 0.4s ease-in-out;
+  z-index: 9999;
+}
+
+.toast.show {
+  top: 20px;
+}
+
+/* Optional hover animation for the Add To Cart button */
+.btn.btn-danger:hover {
+  background-color: #b12a2a !important;
+  transform: scale(1.02);
+  transition: 0.3s;
+}
+
+
+
+
+
+.footer {
+  background: url("../Photos/Footer.png") no-repeat center/cover;
+  color: #fff;
+  padding: 50px 0;
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* === Header Section === */
+.footer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px;
+  flex-wrap: wrap;
+}
+
+.footer-header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-header .pizza-img {
+  width: 100px;
+  height: 70px;
+}
+
+.footer-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.footer-header h2 span {
+  color: #ff6600;
+}
+
+.footer-header .tagline h2 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.footer-header .tagline span {
+  color: #ff6600;
+}
+
+.footer-header .order-btn button {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.footer-header .order-btn button:hover {
+  background-color: #ff6600;
+}
+
+/* === Divider === */
+.footer-top hr {
+  margin: 30px 60px;
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+/* === Content Columns === */
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 0 60px;
+  gap: 20px;
+}
+
+.footer-box {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-box h4 {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.footer-box p {
+  color: #ddd;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-box a {
+  color: #ff9900;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  margin-top: 8px;
+}
+
+.footer-box a:hover {
+  text-decoration: underline;
+}
+
+/* === Newsletter === */
+.newsletter {
+  display: flex;
+  margin: 10px 0;
+}
+
+.newsletter input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  width: 180px;
+  border-radius: 5px 0 0 5px;
+}
+
+.newsletter button {
+  background-color: #e74c3c;
+  border: none;
+  padding: 10px 15px;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.newsletter button:hover {
+  background-color: #ff6600;
+}
+
+/* === Footer Bottom === */
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 15px;
+}
+
+.footer-bottom span {
+  color: #ff9900;
+}
+
+

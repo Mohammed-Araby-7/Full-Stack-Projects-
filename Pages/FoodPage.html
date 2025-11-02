@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Shop</title>
+
+    
+  <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/FoodPage.css" />
+  
+</head>
+<body>
+  <!-- ===== Header Section ===== -->
+  <header class="container-fluid header">
+    <div class="row align-items-center top-row">
+      <div class="col-md-2 logo">
+        <img src="../Photos/Link.png" alt="Logo" />
+      </div>
+
+      <nav class="col-md-7 navigator">
+        <ul>
+          <li><a href="#">Home</a>
+            <i class="bi bi-arrow-down-short"></i>
+            <div class="TheHidden">
+                <div class="content">
+                <a href="#">Home1</a>
+                <a href="#">Home2</a>
+                <a href="#">Home3</a>
+                <a href="#">Home4</a>
+            </div>
+            </div>
+        </li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Blog</a></li>
+
+          <!-- Pages Dropdown -->
+          <li>
+            <a href="#">Pages</a>
+            <i class="bi bi-arrow-down-short"></i>
+            <div class="TheHidden">
+              <div class="content">
+                <a href="#">Checkout Page</a>
+                <a href="#">Single Dish Page</a>
+                <a href="#">Food Page</a>
+                <a href="#">Food Page 2</a>
+                <a href="#">Shopping Cart Page</a>
+                <a href="#">Wishlist Page</a>
+                <a href="#">Profile Page</a>
+                <a href="#">Single Food Page</a>
+                <a href="#">Gallery Page</a>
+                <a href="#">Login Page</a>
+                <a href="#">Signup Page</a>
+                <a href="#">404 Page</a>
+              </div>
+            </div>
+          </li>
+
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="col-md-2 d-flex align-items-center justify-content-end right-icons">
+        <img src="./Photos/Border.png" alt="">
+        <img src="./Photos/BR2.png" alt="">
+        <img src="./Photos/BR3.png" alt="">
+        <button class="btn-login">Login</button>
+      </div>
+    </div>
+
+    <div class="row text-center title-row">
+      <h4>Food Shop</h4>
+      <span>Home / Page / Food Shop</span>
+    </div>
+  </header>
+
+  <!-- <section class="conatiner Food_Page">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="row first_row">
+                <h3>Hot Sale Products</h3>
+
+                <div class="burgerandtext">
+                    <img src="./Photos/pd6.png" alt="">
+                    <div class="text">
+                        <h3>Chicken Fry Recipe</h3>
+                        <span>$10.00 <img src="./Photos/link2.png" alt=""></span>
+                    </div>
+                </div>
+
+                 <div class="burgerandtext">
+                    <img src="./Photos/pd6.png" alt="">
+                    <div class="text">
+                        <h3>Chicken Fry Recipe</h3>
+                        <span>$10.00 <img src="./Photos/link2.png" alt=""></span>
+                    </div>
+                </div>
+
+                 <div class="burgerandtext">
+                    <img src="./Photos/pd6.png" alt="">
+                    <div class="text">
+                        <h3>Chicken Fry Recipe</h3>
+                        <span>$10.00 <img src="./Photos/link2.png" alt=""></span>
+                    </div>
+                </div>
+
+                 <div class="burgerandtext">
+                    <img src="./Photos/pd6.png" alt="">
+                    <div class="text">
+                        <h3>Chicken Fry Recipe</h3>
+                        <span>$10.00 <img src="./Photos/link2.png" alt=""></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-9">
+
+        </div>
+    </div>
+  </section> -->
+   <div class="food-area-wrapper">
+    <div class="container">
+      <div class="row">
+
+        <!-- Sidebar -->
+        <aside class="col-lg-3 col-md-4">
+          <!-- Hot Sale Products -->
+          <div class="sidebar-widget">
+            <h5>Hot Sale Products</h5>
+
+            <div class="hot-sale-item">
+              <img src="./Photos/pd6 (1).png" alt="">
+              <div>
+                <div class="he"><a href="./SingleFood_Page.html">Chicken Fry Recipe</a></div>
+                <div class="price">$10.00 <img src="./Photos/link2.png" alt=""></div>
+              </div>
+            </div>
+
+            <div class="hot-sale-item">
+              <img src="./Photos/pd6 (1).png" alt="">
+              <div>
+                <div class="he"><a href="./SingleFood_Page.html">Burger Compo</a></div>
+                <div class="price">$20.00 <img src="./Photos/link2.png" alt=""></div>
+              </div>
+            </div>
+
+            <div class="hot-sale-item">
+              <img src="./Photos/pd4.png" alt="">
+              <div>
+                <div class="he"><a href="./SingleFood_Page.html">Chicken Soup</a></div>
+                <div class="price">$80.00 <img src="./Photos/link2.png" alt=""></div>
+              </div>
+            </div>
+
+            <div class="hot-sale-item">
+              <img src="./Photos/pd7.png" alt="">
+              <div>
+                <div class="he"><a href="./SingleFood_Page.html">Black Frame</a></div>
+                <div class="price">$80.00 <img src="./Photos/link2.png" alt=""></div>
+              </div>
+            </div>
+
+
+          </div>
+
+          <!-- Filter by Price -->
+          <div class="sidebar-widget filter-range">
+            <h5>Filter by Price</h5>
+            <input type="range" min="0" max="100" value="50">
+          </div>
+
+
+          <!-- Filter By Menu -->
+           <div class="sidebar-widget">
+            <h5>Filter By Menu</h5>
+
+            <div class="hot-sale-item">
+              <img src="./Photos/pd6 (1).png" alt="">
+              <div>
+                <div class="he">Burger</div>
+                
+              </div>
+            </div>
+
+            <div class="hot-sale-item">
+              <img src="./Photos/pd6 (1).png" alt="">
+              <div>
+                <div class="he">Chicken Soup</div>
+                
+              </div>
+            </div>
+
+            <div class="hot-sale-item">
+              <img src="./Photos/fm3.png" alt="">
+              <div>
+                <div class="he">Pizza</div>
+                
+              </div>
+            </div>
+
+            <div class="hot-sale-item">
+              <img src="./Photos/pd7.png" alt="">
+              <div>
+                <div class="he">Black Frame</div>
+                
+              </div>
+            </div>
+
+
+          </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="col-lg-9 col-md-8">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>There are <strong>16 products</strong>.</div>
+            <div class="sorting-area">
+              <span>Sort by:</span>
+              <select>
+                <option>Price: High to Low</option>
+                <option>Price: Low to High</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row g-4">
+            <!-- Product 1 -->
+            <div class="col-md-4 ">
+              <div class="single-dish">
+                <span class="badge-custom">Hot</span>
+                <div class="cart-icons">
+                  <img src="./Photos/link2.png" alt=""  class="imgicon">
+                    
+                </div>
+                <img src="./Photos/pd1.png" alt="Burger">
+                <h5 class="headFoodh5" ><a href="./SingleFood_Page.html">Burger Sandwich</a></h5>
+                <p class="headFoodP">Delicious garlic-flavored burger for BBQ lovers.</p>
+                <div class="price">Price: $23.00</div>
+              </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="col-md-4 ">
+              <div class="single-dish">
+                <div class="cart-icons">
+                  <img src="./Photos/link2.png" alt=""  class="imgicon">
+                </div>
+                <img src="./Photos/pd2.png" alt="Pizza">
+                <h5 class="headFoodh5" ><a href="./SingleFood_Page2.html">Chicken Fry</a></h5>
+
+                <p>Loaded with fresh vegetables and cheese.</p>
+                <div class="price">Price: $19.00</div>
+              </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="col-md-4 ">
+              <div class="single-dish">
+                <span class="badge-custom" style="background:#28a745;">New</span>
+                <div class="cart-icons">
+                  <img src="./Photos/link2.png" alt=""  class="imgicon">
+                </div>
+                <img src="./Photos/pd3.png" alt="Chicken Fry">
+                <h5 class="headFoodh5" ><a href="./SingleFood_Page3.html">Chicken Soup</a></h5>
+
+                <p>Crispy, juicy chicken with special seasoning.</p>
+                <div class="price">Price: $16.00 <i class="fa fa-star text-warning ms-2"></i> </div>
+              </div>
+            </div>
+
+
+          </div>
+
+          <div class="row g-4">
+            <!-- Product 1 -->
+            <div class="col-md-4 ">
+              <div class="single-dish">
+                <span class="badge-custom">Hot</span>
+                <div class="cart-icons">
+                  <img src="./Photos/link2.png" alt=""  class="imgicon">
+                    
+                </div>
+                <img src="./Photos/pd1.png" alt="Burger">
+                <h5 class="headFoodh5" ><a href="./SingleFood_Page.html">Burger Sandwich</a></h5>
+                <p class="headFoodP">Delicious garlic-flavored burger for BBQ lovers.</p>
+                <div class="price">Price: $23.00</div>
+              </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="col-md-4 ">
+              <div class="single-dish">
+                <div class="cart-icons">
+                  <img src="./Photos/link2.png" alt=""  class="imgicon">
+                </div>
+                <img src="./Photos/pd2.png" alt="Pizza">
+                <h5 class="headFoodh5" ><a href="./SingleFood_Page2.html">Chicken Fry</a></h5>
+
+                <p>Loaded with fresh vegetables and cheese.</p>
+                <div class="price">Price: $19.00</div>
+              </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="col-md-4 ">
+              <div class="single-dish">
+                <span class="badge-custom" style="background:#28a745;">New</span>
+                <div class="cart-icons">
+                  <img src="./Photos/link2.png" alt=""  class="imgicon">
+                </div>
+                <img src="./Photos/pd3.png" alt="Chicken Fry">
+                <h5 class="headFoodh5" ><a href="./SingleFood_Page3.html">Chicken Soup</a></h5>
+
+                <p>Crispy, juicy chicken with special seasoning.</p>
+                <div class="price">Price: $16.00 <i class="fa fa-star text-warning ms-2"></i> </div>
+              </div>
+            </div>
+
+
+          </div>
+
+          <div class="row g-4">
+            <!-- Product 1 -->
+            <div class="col-md-4 ">
+              <div class="single-dish">
+                <span class="badge-custom">Hot</span>
+                <div class="cart-icons">
+                  <img src="./Photos/link2.png" alt=""  class="imgicon">
+                    
+                </div>
+                <img src="./Photos/pd1.png" alt="Burger">
+                <h5 class="headFoodh5" ><a href="./SingleFood_Page.html">Burger Sandwich</a></h5>
+                <p class="headFoodP">Delicious garlic-flavored burger for BBQ lovers.</p>
+                <div class="price">Price: $23.00</div>
+              </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="col-md-4 ">
+              <div class="single-dish">
+                <div class="cart-icons">
+                  <img src="./Photos/link2.png" alt=""  class="imgicon">
+                </div>
+                <img src="./Photos/pd2.png" alt="Pizza">
+                <h5 class="headFoodh5" ><a href="./SingleFood_Page2.html">Chicken Fry</a></h5>
+
+                <p>Loaded with fresh vegetables and cheese.</p>
+                <div class="price">Price: $19.00</div>
+              </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="col-md-4 ">
+              <div class="single-dish">
+                <span class="badge-custom" style="background:#28a745;">New</span>
+                <div class="cart-icons">
+                  <img src="./Photos/link2.png" alt=""  class="imgicon">
+                </div>
+                <img src="./Photos/pd3.png" alt="Chicken Fry">
+                <h5 class="headFoodh5" ><a href="./SingleFood_Page3.html">Chicken Soup</a></h5>
+
+                <p>Crispy, juicy chicken with special seasoning.</p>
+                <div class="price">Price: $16.00 <i class="fa fa-star text-warning ms-2"></i> </div>
+              </div>
+            </div>
+
+
+          </div>
+
+          <div class="row g-4">
+            <!-- Product 1 -->
+            <div class="col-md-4 ">
+              <div class="single-dish">
+                <span class="badge-custom">Hot</span>
+                <div class="cart-icons">
+                  <img src="./Photos/link2.png" alt=""  class="imgicon">
+                    
+                </div>
+                <img src="./Photos/pd1.png" alt="Burger">
+                <h5 class="headFoodh5" ><a href="./SingleFood_Page.html">Burger Sandwich</a></h5>
+                <p class="headFoodP">Delicious garlic-flavored burger for BBQ lovers.</p>
+                <div class="price">Price: $23.00</div>
+              </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="col-md-4 ">
+              <div class="single-dish">
+                <div class="cart-icons">
+                  <img src="./Photos/link2.png" alt=""  class="imgicon">
+                </div>
+                <img src="./Photos/pd2.png" alt="Pizza">
+                <h5 class="headFoodh5" ><a href="./SingleFood_Page2.html">Chicken Fry</a></h5>
+
+                <p>Loaded with fresh vegetables and cheese.</p>
+                <div class="price">Price: $19.00</div>
+              </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="col-md-4 ">
+              <div class="single-dish">
+                <span class="badge-custom" style="background:#28a745;">New</span>
+                <div class="cart-icons">
+                  <img src="./Photos/link2.png" alt=""  class="imgicon">
+                </div>
+                <img src="./Photos/pd3.png" alt="Chicken Fry">
+                <h5 class="headFoodh5" ><a href="./SingleFood_Page3.html">Chicken Soup</a></h5>
+
+                <p>Crispy, juicy chicken with special seasoning.</p>
+                <div class="price">Price: $16.00 <i class="fa fa-star text-warning ms-2"></i> </div>
+              </div>
+            </div>
+
+
+          </div>
+
+          <div class="row g-4">
+            <!-- Product 1 -->
+            <div class="col-md-4 ">
+              <div class="single-dish">
+                <span class="badge-custom">Hot</span>
+                <div class="cart-icons">
+                  <img src="./Photos/link2.png" alt=""  class="imgicon">
+                    
+                </div>
+                <img src="./Photos/pd1.png" alt="Burger">
+                <h5 class="headFoodh5" ><a href="./SingleFood_Page.html">Burger Sandwich</a></h5>
+                <p class="headFoodP">Delicious garlic-flavored burger for BBQ lovers.</p>
+                <div class="price">Price: $23.00</div>
+              </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="col-md-4 ">
+              <div class="single-dish">
+                <div class="cart-icons">
+                  <img src="./Photos/link2.png" alt=""  class="imgicon">
+                </div>
+                <img src="./Photos/pd2.png" alt="Pizza">
+                <h5 class="headFoodh5" ><a href="./SingleFood_Page2.html">Chicken Fry</a></h5>
+
+                <p>Loaded with fresh vegetables and cheese.</p>
+                <div class="price">Price: $19.00</div>
+              </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="col-md-4 ">
+              <div class="single-dish">
+                <span class="badge-custom" style="background:#28a745;">New</span>
+                <div class="cart-icons">
+                  <img src="./Photos/link2.png" alt=""  class="imgicon">
+                </div>
+                <img src="./Photos/pd3.png" alt="Chicken Fry">
+                <h5 class="headFoodh5" ><a href="./SingleFood_Page3.html">Chicken Soup</a></h5>
+
+                <p>Crispy, juicy chicken with special seasoning.</p>
+                <div class="price">Price: $16.00 <i class="fa fa-star text-warning ms-2"></i> </div>
+              </div>
+            </div>
+
+
+          </div>
+          
+
+         
+
+          
+
+
+          
+
+          
+          
+        </main>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <script src="./js/FoodPage.js"></script>
+</body>
+</html>

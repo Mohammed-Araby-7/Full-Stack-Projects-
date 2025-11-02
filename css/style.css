@@ -1,0 +1,1063 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Home{
+    width: 100%;
+    height: 100vh;
+    margin-top: 100px;
+    background-image: url("../Photos/Section.png");
+    position: relative;
+}
+
+.navigator{
+    display: flex;
+    /* background-color: green; */
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100px;
+    position: relative;
+    position: fixed;
+    top: 0px;
+    background-color: #ffffff;
+    z-index: 100;
+    
+}
+.navigator img{
+    width: 150px;
+    
+}
+
+.navigator ul{
+    display: flex;
+    gap: 15px;
+    line-height: 100px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.navigator ul li a{
+    color: #2A435D;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+
+/*  
+
+
+
+
+*/
+
+.navigator ul li {
+    position: relative; /* ensures dropdown is placed relative to each item */
+}
+
+/* DROPDOWN CONTAINER */
+.TheHidden {
+    position: absolute;
+    top: 80%; /* directly below the "Home" item */
+    left: 100%;
+    transform: translateX(-50%); /* centers it under the menu text */
+    background-color: #CC3333;
+    border-radius: 8px;
+    display: none;
+    min-width: 180px; /* prevents it from collapsing too narrow */
+    max-width: 180px; /* keeps it compact */
+    padding: 0px 10px;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    white-space: nowrap; /* prevents items from wrapping to new lines */
+}
+
+/* DROPDOWN CONTENT */
+.TheHidden .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 5px;
+    position: relative;
+    
+}
+
+/* LINKS INSIDE DROPDOWN */
+.TheHidden .content a {
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.95em;
+    transition: all 0.3s ease;
+    margin: 0px;
+    height: 40px;
+    
+}
+
+.TheHidden .content a:hover {
+    color: #FFDADA;
+    transform: translateX(3px); /* smooth slide effect */
+}
+
+/* SHOW DROPDOWN ON HOVER */
+.navigator ul li:hover .TheHidden {
+    display: block;
+}
+/* 
+
+
+*/
+.navigator ul li i{
+    color: black;
+    font-size: 18px;
+    
+}
+.navigator ul li img{
+    width: 40px;
+}
+.navigator .end{
+    display: flex;
+    gap: 20px;
+    line-height: 100px;
+    align-items: center;
+    justify-content: center;
+}
+.navigator .end img{
+    width: 70px;
+    height: 70px;
+    
+}
+.navigator .end div{
+    display: flex;
+    flex-direction: column;
+    line-height: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.navigator .end div span:nth-child(2)
+{
+    color: #CC3333;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.navigator button{
+    
+    width: 150px;
+    line-height: 50px;
+    border-radius: 5px;
+    background-color: #CC3333;
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 1.5em;
+    transition: all .5s;
+
+}
+.navigator button:hover{
+    background-color: white;
+    color: #CC3333;
+    border: 1px solid #CC3333;
+}
+
+/* End Navigator */
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.header .rightside{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+.header .rightside .first{
+    font-family:"Caveat", cursive;
+    font-size: 50px;
+    color: #CC3333;
+    font-weight: bold;
+}
+.header .rightside p{
+    font-family: "Poppins",sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+.header .rightside p span{
+    font-size: 3em;
+    color: #2A435D;
+    font-weight: bold;
+}
+.header .rightside p span i{
+     font-family: "Poppins",sans-serif;
+     color: #CC3333;
+}
+
+.header .rightside .second{
+    color: #2A435D;
+    font-weight: bold;
+    font-family: "Poppins",sans-serif;
+    font-size: 1.5em;
+}
+
+.header .rightside .btns{
+    display: flex;
+    gap: 30px;
+}
+.header .rightside .btns button{
+    outline: none;
+    border: none;
+    padding: 10px 40px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #CC3333;
+    color: white;
+    transition: all .5s;
+    
+}
+.header .rightside .btns button:hover{
+    background-color: white;
+    color: #CC3333;
+    border: 1px solid #CC3333;
+}
+.header .rightside .btns div{
+    display: flex;
+    gap: 10px;
+    padding: 10px 40px;
+    font-size: 30px;
+    color: #2A435D;
+    font-weight: bold;
+}
+.header .rightside .btns div span{
+    color: #CC3333;
+    
+}
+.header .leftside{
+    position: relative;
+}
+.header .leftside img{
+    width: 90%;
+}
+.header .leftside div{
+    position: absolute;
+    top: 0px;
+    left: 20%;
+}
+
+/* -------------------- PROMO SECTIONS -------------------- */
+.Items {
+  margin-top: 80px;
+  margin-bottom: 100px;
+}
+
+.Items img {
+  width: 100%;
+  border-radius: 15px;
+  display: block;
+  object-fit: cover;
+}
+
+/* Each promo box */
+.BuzzedBurger,
+.SuperFirst .col-md-6,
+.SuperSecond .col-md-6,
+.CHICKEN {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  
+}
+
+
+
+/* Text on each image */
+.BuzzedBurger .header,
+.SuperFirst .col-md-6 .header,
+.SuperSecond .col-md-6 .header,
+.CHICKEN .header {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  /* background: rgba(0, 0, 0, 0.35); slight background for contrast */
+  padding: 8px 15px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 260px;
+}
+.BuzzedBurger .header,.CHICKEN .header{
+    left: 30%;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    font-size: 2.3rem;
+}
+
+.SuperFirst .col-md-6 .header h3,
+.SuperSecond .col-md-6 .header h3,
+.CHICKEN .header h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.BuzzedBurger .header span,
+.CHICKEN .header span {
+  font-size: 0.95rem;
+  color: #FFDADA;
+}
+
+/* ORDER NOW button */
+.BuzzedBurger button,
+.SuperFirst .col-md-6 button,
+.SuperSecond .col-md-6 button,
+.CHICKEN button {
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #CC3333;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.BuzzedBurger button{
+    left: 30%;
+}
+.CHICKEN button{
+    left: 30%;
+    background-color: white;
+    color: #CC3333;
+}
+.BuzzedBurger button:hover,
+.SuperFirst .col-md-6 button:hover,
+.SuperSecond .col-md-6 button:hover {
+  background-color: white;
+  color: #CC3333;
+  border: 2px solid #CC3333;
+}
+
+.CHICKEN button:hover{
+    color: white;
+    background-color: #CC3333;
+    border: 2px solid white;
+}
+
+
+/* Menu */
+.Poupular_Menu .frow h2{
+    font-family: "Caveat",cursive;
+    color: #CC3333;
+    font-weight: bold;
+}
+
+.Poupular_Menu  .srow h2{
+    font-size: 3.5em;
+    font-weight: bold;
+    color: #2A435D;
+}
+.Poupular_Menu  .srow h2 span{
+    color: #CC3333;
+}
+.Poupular_Menu .trow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+}
+.Poupular_Menu .trow .col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 10px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 5px rgb(239, 233, 233);
+    cursor: pointer;
+    transition: all .5s;
+    max-height: 140px;
+}
+/* .Poupular_Menu .trow .col:first-child{
+    background-color: #CC3333;
+} */
+.Poupular_Menu .trow .col:first-child span{
+  color: #2A435D;
+}
+
+.Poupular_Menu .trow .col img{
+    width: 80px;
+}
+.Poupular_Menu .trow .col span{
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #2A435D;
+    transition: all .5s;
+}
+
+.Poupular_Menu .trow .col:hover{
+    background-color: #CC3333;
+    color: white;
+    
+}
+.Poupular_Menu .trow .col:hover span{
+    color: white;
+}
+
+
+.Poupular_Menu .trow .col:first-child span{
+    color: #2A435D;
+}
+
+.Poupular_Menu .frow{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.Poupular_Menu .frow .row{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+
+.Poupular_Menu .frow .row .col-md-4{
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid rgb(228, 215, 215);
+    border-radius: 10px;
+    padding: 10px 0px;
+    transition: all 0.5s;
+  
+}
+.Poupular_Menu .frow .row .col-md-4:hover{
+    box-shadow: 5px 5px 5px 5px rgb(191, 182, 182);
+}
+.Poupular_Menu .frow .row .col-md-4 img{
+    width: 100px;
+}
+.Poupular_Menu .frow .row .col-md-4  .content{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+}
+.Poupular_Menu .frow .row .col-md-4  .content h4{
+    color: #2A435D;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .5s;
+}
+.Poupular_Menu .frow .row .col-md-4  .content h4:hover{
+    color: #CC3333;
+}
+.Poupular_Menu .frow .row .col-md-4  .content .last{
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #2A435D;
+}
+
+.Poupular_Menu .frow.mt-5 {
+  transition: opacity 0.3s ease;
+}
+
+.trow .col {
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.trow .col.active {
+  color: #d32f2f;
+  font-weight: 700;
+  transform: scale(1.05);
+}
+
+
+.trow .col img {
+  transition: transform 0.3s ease;
+}
+
+.trow .col.active img {
+  transform: scale(1.1);
+}
+
+.trow .col.active {
+  background-color: #d32f2f; /* orange highlight */
+  color: white;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.trow .col {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.Poupular_Menu .trow .col.active {
+  background-color: #CC3333;  /* Highlight red */
+  color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.Poupular_Menu .trow .col.active span {
+  color: white;
+}
+
+/* .trow .col:hover {
+  background-color: #;
+} */
+/* End Active Buttons */
+
+
+
+/* Delivery Section */
+.delivery-section {
+  background-color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+
+
+/* ===== First Row ===== */
+.first-row h3 {
+  font-size: 3.2rem;
+  color: #2A435D;
+  font-family: "Poppins",sans-serif;
+}
+
+.first-row h3 span {
+  color: #cc3333;
+  font-family: "Poppins",sans-serif;
+}
+
+.first-row h4 {
+  font-size: 2.8rem;
+  font-family: "Poppins",sans-serif;
+}
+
+.first-row button {
+  background-color: #cc3333;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  padding: 20px 30px;
+}
+
+.first-row button:hover {
+  background-color: #fff;
+  color: #cc3333;
+  border: 1px solid #cc3333;
+}
+
+/* .order-btn {
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+.order-btn:hover {
+  border-color: white;
+} */
+
+/* ===== Second Row ===== */
+.delivery-text h5{
+     font-family:"Caveat", cursive;
+     font-size: 2.5em;
+}
+.delivery-text h2 {
+  font-size: 3.2rem;
+  font-family: "Poppins",sans-serif;
+  line-height: 1.3;
+}
+
+.delivery-text h2 span {
+  color: #cc3333;
+}
+
+.delivery-text p {
+  max-width: 500px;
+  font-size: 1rem;
+}
+#SUPERBURGER{
+    color: #2A435D !important;
+}
+.small-bike {
+  width: 60px;
+  height: auto;
+}
+
+#A_Moments{
+    color: #2A435D;
+}
+/* ===== Bike Animation ===== */
+.main-bike {
+  width: 85%;
+  max-width: 450px;
+  animation: bikeMove 2.5s ease-in-out infinite alternate;
+}
+
+
+
+/* Poublar or Food Dishes */
+.Food_Items {
+  text-align: center;
+}
+
+.Food_Items .menu-buttons .menu-btn {
+  border: 1px solid #CC3333;
+  color: #CC3333;
+  background: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  transition: 0.3s;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.Food_Items .menu-buttons .menu-btn.active,
+.Food_Items .menu-buttons .menu-btn:hover {
+  background-color: #CC3333;
+  color: white;
+}
+
+.food-card {
+  border: 1px solid #eee;
+  border-radius: 15px;
+  background: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.food-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+.food-card img {
+  width: 100%;
+  max-height: 160px;
+  object-fit: contain;
+}
+
+.menu-content {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  display: none;
+}
+.menu-content.show {
+  display: block;
+  opacity: 1;
+}
+
+.menu-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+  display: none;
+}
+
+.menu-section.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#Food_Items_headingh5{
+    font-family:"Caveat", cursive;
+    font-size: 2.5em;
+    color:#CC3333;
+}
+#Food_Items_headingP{
+    font-family: "Poppins",sans-serif;
+    font-size: 3.5em;
+    color: #2A435D;
+}
+#Food_Items_headingP span{
+    color: #CC3333;
+    
+}
+/* End  Poublar or Food Dishes*/
+
+
+
+/* Start Chef */
+
+.Chef {
+  display: flex;
+  justify-content: space-around;
+}
+
+.Chef #chef {
+  width: 400px;
+  border-radius: 8px;
+}
+
+.fcol {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+.Chef .fbutton {
+  border: none;
+  outline: none;
+  width: 20%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  bottom: 80px;
+  right: 200px;
+  background-color: #CC3333;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.Chef .fbutton span {
+  font-size: 1.2em;
+  color: white;
+}
+
+.Chef .scol {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.Chef .scol .he4 h4 {
+  font-family: "Caveat", cursive;
+  font-size: 2em;
+  font-weight: bold;
+  color: #CC3333;
+}
+
+.Chef .scol .he3 h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 3em;
+  font-weight: bold;
+  color: #2A435D;
+}
+
+
+
+.ffcol {
+  border: 1px solid #ddd;
+  box-shadow: 5px 5px 5px rgb(245, 243, 243);
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ffcol:hover {
+  transform: translateY(-5px);
+  box-shadow: 5px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.ffcol img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.ffcol .price {
+  display: block;
+  margin: 10px 0;
+  font-weight: bold;
+  color: #2A435D;
+}
+
+/* ✅ Add-to-cart button styling */
+.add-cart-btn {
+  background-color: #CC3333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.add-cart-btn:hover {
+  background-color: #A82A2A;
+}
+
+
+/* Start Reveies */
+/* ===== Testimonial Section ===== */
+.testimonial {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.testimonial .title {
+  font-family: "Caveat", cursive;
+  color: #CC3333;
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.testimonial .subtitle {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5em;
+  font-weight: 600;
+  color: #2A435D;
+  margin-bottom: 30px;
+}
+
+.testimonial-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 5px 8px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card .client-img {
+  width: 100%;
+  border-radius: 50%;
+  border: 2px solid #CC3333;
+}
+
+.testimonial-card .content h3 {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #2A435D;
+  margin-bottom: 5px;
+}
+
+.testimonial-card .content h4 {
+  font-size: 0.95em;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.testimonial-card .symbols img {
+  width: 18px;
+  margin-right: 3px;
+}
+
+.testimonial-card .feedback {
+  margin-top: 15px;
+  font-size: 0.95em;
+  color: #555;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+
+
+/* End Reviews */
+
+
+/* End Chef */
+
+
+/* Start footer */
+.footer {
+  background: #f8f9fa;
+  padding: 60px 0 30px;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Newsletter Row */
+.newsletter-row {
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.newsletter-row h2 {
+  font-size: 28px;
+}
+
+.newsletter-row form {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.newsletter-row input[type="email"] {
+  border: none;
+  padding: 12px 18px;
+  outline: none;
+  flex: 1;
+  font-size: 16px;
+  border-radius: 50px 0 0 50px;
+}
+
+.newsletter-row button {
+  border-radius: 0 50px 50px 0;
+  padding: 12px 25px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.newsletter-row button:hover {
+  background: #c82333;
+}
+
+/* Smooth underline border */
+.newsletter-border {
+  width: 80%;
+  height: 3px;
+  background: linear-gradient(to right, #ff6b6b, #ffb199);
+  border-radius: 50px;
+  margin: 0 auto;
+}
+
+/* Locations Section */
+.locations-row {
+  margin-top: 50px;
+}
+
+.location {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.location:hover {
+  transform: translateY(-5px);
+}
+
+.book-table {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.book-table:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  margin-top: 60px;
+  border-top: 1px solid #ddd;
+  padding-top: 30px;
+}
+
+.footer-bottom nav a {
+  transition: 0.3s;
+}
+
+.footer-bottom nav a:hover {
+  color: #dc3545;
+}
+
+/* End footer */
+@keyframes bikeMove {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(20px);
+  }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .first-row h3 {
+    font-size: 1.8rem;
+  }
+
+  .delivery-text {
+    text-align: center;
+  }
+
+  .small-bike {
+    margin: 0 auto 10px;
+  }
+
+  .main-bike {
+    width: 100%;
+  }
+}
+
+/* End Delivery Section */
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .BuzzedBurger .header,
+  .SuperFirst .col-md-6 .header,
+  .SuperSecond .col-md-6 .header,
+  .CHICKEN .header {
+    bottom: 30%;
+    font-size: 1rem;
+  }
+
+  .BuzzedBurger button,
+  .SuperFirst .col-md-6 button,
+  .SuperSecond .col-md-6 button,
+  .CHICKEN button {
+    bottom: 10%;
+    font-size: 0.9rem;
+    padding: 8px 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .Items {
+    margin-top: 50px;
+  }
+  .BuzzedBurger .header,
+  .SuperFirst .col-md-6 .header,
+  .SuperSecond .col-md-6 .header,
+  .CHICKEN .header {
+    bottom: 35%;
+    width: 90%;
+    font-size: 0.9rem;
+  }
+}
+
+
+/* ===== Scroll Reveal Animation ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal.left {
+  transform: translateX(-60px);
+}
+.reveal.right {
+  transform: translateX(60px);
+}

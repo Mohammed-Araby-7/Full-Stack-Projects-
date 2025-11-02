@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Food Page</title>
+
+      <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/SingleFood.css"/>
+</head>
+<body>
+
+  <!-- <img src="./Photos/Big.png" alt="Main Dish" class="img-fluid big-img w-100 rounded shadow">
+    -->
+      <!-- ===== Header Section ===== -->
+  <header class="container-fluid header">
+    <div class="row align-items-center top-row">
+      <div class="col-md-2 logo">
+        <img src="../Photos/Link.png" alt="Logo" />
+      </div>
+
+      <nav class="col-md-7 navigator">
+        <ul>
+          <li><a href="#">Home</a>
+            <i class="bi bi-arrow-down-short"></i>
+            <div class="TheHidden">
+                <div class="content">
+                <a href="#">Home1</a>
+                <a href="#">Home2</a>
+                <a href="#">Home3</a>
+                <a href="#">Home4</a>
+            </div>
+            </div>
+        </li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Blog</a></li>
+
+          <!-- Pages Dropdown -->
+          <li>
+            <a href="#">Pages</a>
+            <i class="bi bi-arrow-down-short"></i>
+            <div class="TheHidden">
+              <div class="content">
+                <a href="#">Checkout Page</a>
+                <a href="#">Single Dish Page</a>
+                <a href="#">Food Page</a>
+                <a href="#">Food Page 2</a>
+                <a href="./ShoppingCart.html">Shopping Cart Page</a>
+                <a href="#">Wishlist Page</a>
+                <a href="#">Profile Page</a>
+                <a href="#">Single Food Page</a>
+                <a href="#">Gallery Page</a>
+                <a href="#">Login Page</a>
+                <a href="#">Signup Page</a>
+                <a href="#">404 Page</a>
+              </div>
+            </div>
+          </li>
+
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="col-md-2 d-flex align-items-center justify-content-end right-icons">
+        <img src="./Photos/Border.png" alt="">
+        <img src="./Photos/BR2.png" alt="">
+        <img src="./Photos/BR3.png" alt="">
+        <button class="btn-login">Login</button>
+      </div>
+    </div>
+
+    <div class="row text-center title-row">
+      <h4>Chicken Fry Recipe</h4>
+      <span>Home / Food Shop /Chicken Fry Recipe</span>
+    </div>
+  </header>
+
+    
+
+  <!-- Product Detail Section -->
+<div class="container my-5">
+  <div class="row align-items-center">
+    <!-- Left Column: Images -->
+    <div class="col-md-6 theleft">
+      <div class="mb-4">
+        <img src="./Photos/pd2 (1).png" alt="Main Dish" class="img-fluid big-img  rounded shadow" style="width: 300px;">
+      </div>
+      <div class="row g-3 small-images">
+        <div class="col-4"><img src="./Photos/t1.png" class="img-fluid thumb rounded shadow-sm" /></div>
+        <div class="col-4"><img src="./Photos/t2.png" class="img-fluid thumb rounded shadow-sm" /></div>
+        <div class="col-4"><img src="./Photos/t3.png" class="img-fluid thumb rounded shadow-sm" /></div>
+      </div>
+    </div>
+
+    <!-- Right Column: Product Info -->
+    <div class="col-md-6 theright mt-4 mt-md-0">
+      <h3 class="dish-title mb-3 fw-bold">Chicken Fry </h3>
+
+      <div class="bar d-flex align-items-center flex-wrap mb-3">
+        <span class="price me-3 fs-4 text-danger fw-bold">
+          $19.00 <span class="old-price text-muted text-decoration-line-through fs-6">$27.00</span>
+        </span>
+        <img src="./Photos/star5.png" alt="Rating" class="stars me-3" style="height: 20px;">
+        <span class="info me-3 text-muted small">Comment</span>
+        <span class="info text-muted small">200+ Likes</span>
+      </div>
+
+      <p class="dish-desc text-muted mb-4">
+        Hing lesser replenish evening called void a sea blessed meat fourth called moveth place.
+        Quarter Rack of Ribs served with your choice of side, Pulled Pork, Beer Braised Brisket.
+      </p>
+
+      <div class="options my-3">
+        <div class="qty-selector">
+          <button type="button" class="btn-qty minus">−</button>
+          <input type="number" id="quantity" value="1" min="1" max="10">
+          <button type="button" class="btn-qty plus">+</button>
+        </div>
+
+        <span class="size">Size: XL / LG</span>
+        <span class="stock">Available stock</span>
+      </div>
+
+      <button class="btn btn-danger btn-lg px-4">Add To Cart</button>
+
+      <div id="toast" class="toast">✅ Added to cart successfully!</div>
+    </div>
+  </div>
+
+  <!-- Tabs Section -->
+  <div class="tabs-section mt-5">
+    <div class="tab-buttons">
+      <button class="tab-btn active" data-tab="description">Description</button>
+      <button class="tab-btn" data-tab="info">Additional Information</button>
+      <button class="tab-btn" data-tab="reviews">Reviews</button>
+    </div>
+
+    <div class="tab-content fade active" id="description">
+      <p>A hamburger (also burger for short) is a sandwich consisting of one or more cooked patties of ground meat,
+        usually beef, placed inside a sliced bread roll or bun. The patty may be pan fried, grilled, smoked or flame broiled.
+      </p>
+      <h4><span>Ingredients:</span> Focaccia bun, Balsamic Vinaigrette, Pesto, Tomato, Swiss Cheese</h4>
+
+      <h5>Burger Size</h5>
+      <table class="burger-table">
+        <tr><th></th><th>S</th><th>M</th><th>L</th></tr>
+        <tr><td>Chicken Fry Regular Fries</td><td>128</td><td>340</td><td>15</td></tr>
+        <tr><td>Chicken Fry Satisfries</td><td>87</td><td>190</td><td>8</td></tr>
+      </table>
+    </div>
+
+    <div class="tab-content fade" id="info">
+      <p>Additional information about the product such as ingredients, storage instructions, and nutritional details.</p>
+    </div>
+
+    <div class="tab-content fade" id="reviews">
+      <p>Customer reviews will appear here. You can add ratings, comments, and photos.</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-header">
+      <div class="logo">
+        <h2><span class="brand">Khadyo</span></h2>
+        <img src="./Photos/Link.png" alt="Pizza" class="pizza-img">
+        
+      </div>
+
+      <div class="tagline">
+        <h2>Feel Hunger! Order Your <span>Like Food.</span></h2>
+      </div>
+
+      <div class="order-btn">
+        <button>Order Now</button>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="footer-content">
+      <div class="footer-box">
+        <h4>Address</h4>
+        <p>570 8th Ave, New York, NY 10018 United States</p>
+        <a href="#">View Google Map</a>
+      </div>
+
+      <div class="footer-box">
+        <h4>Book A Table</h4>
+        <p>Dogfood och Sliders foodtruck. Under Om oss kan ni läsa</p>
+        <a href="#">Make A Call</a>
+      </div>
+
+      <div class="footer-box">
+        <h4>Opening Hours</h4>
+        <p>Monday–Friday: 8am – 4pm<br>Saturday: 9am – 5pm</p>
+        <a href="#">Make A Call</a>
+      </div>
+
+      <div class="footer-box">
+        <h4>Newsletter</h4>
+        <div class="newsletter">
+          <input type="email" placeholder="Enter Your Email">
+          <button><i class="fa fa-paper-plane"></i></button>
+        </div>
+        <a href="#">Subscribe Now</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright © 2021 <span>Khadyo</span></p>
+  </div>
+</footer>
+
+
+    <script src="./js/Singlepage.js"></script>
+
+</body>
+</html>

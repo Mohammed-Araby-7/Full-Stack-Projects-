@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+      <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/Checkout_page.css" />
+</head>
+<body>
+      <header class="container-fluid header">
+    <div class="row align-items-center top-row">
+      <div class="col-md-2 logo">
+        <img src="../Photos/Link.png" alt="Logo" />
+      </div>
+
+      <nav class="col-md-7 navigator">
+        <ul>
+          <li><a href="#">Home</a>
+            <i class="bi bi-arrow-down-short"></i>
+            <div class="TheHidden">
+                <div class="content">
+                <a href="#">Home1</a>
+                <a href="#">Home2</a>
+                <a href="#">Home3</a>
+                <a href="#">Home4</a>
+            </div>
+            </div>
+        </li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Blog</a></li>
+
+          <!-- Pages Dropdown -->
+          <li>
+            <a href="#">Pages</a>
+            <i class="bi bi-arrow-down-short"></i>
+            <div class="TheHidden">
+              <div class="content">
+                <a href="#">Checkout Page</a>
+                <a href="#">Single Dish Page</a>
+                <a href="#">Food Page</a>
+                <a href="#">Food Page 2</a>
+                <a href="#">Shopping Cart Page</a>
+                <a href="#">Wishlist Page</a>
+                <a href="#">Profile Page</a>
+                <a href="#">Single Food Page</a>
+                <a href="#">Gallery Page</a>
+                <a href="#">Login Page</a>
+                <a href="#">Signup Page</a>
+                <a href="#">404 Page</a>
+              </div>
+            </div>
+          </li>
+
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="col-md-2 d-flex align-items-center justify-content-end right-icons">
+        <img src="./Photos/Border.png" alt="">
+        <img src="./Photos/BR2.png" alt="">
+        <img src="./Photos/BR3.png" alt="">
+        <button class="btn-login">Login</button>
+      </div>
+    </div>
+
+    <div class="row text-center title-row">
+      <h4>Checkout Page</h4>
+      <span>Home / Page / Checkout</span>
+    </div>
+  </header>
+
+
+
+
+
+
+<main class="container checkout-container mt-5 mb-5">
+  <div class="row">
+    <!-- Billing Details -->
+    <div class="col-md-6 billing-details">
+      <h3>Billing Details</h3>
+      <form id="checkoutForm">
+  <div class="form-group mb-3">
+    <label>First Name</label>
+    <input 
+      type="text" 
+      class="form-control" 
+      id="firstName" 
+      required 
+      pattern="^[A-Za-z]{2,20}$"
+      title="First name should contain only letters and be 2–20 characters long." />
+  </div>
+
+  <div class="form-group mb-3">
+    <label>Last Name</label>
+    <input 
+      type="text" 
+      class="form-control" 
+      id="lastName" 
+      required 
+      pattern="^[A-Za-z]{2,20}$"
+      title="Last name should contain only letters and be 2–20 characters long." />
+  </div>
+
+  <div class="form-group mb-3">
+    <label>Country</label>
+    <input 
+      type="text" 
+      class="form-control" 
+      id="country" 
+      required 
+      pattern="^[A-Za-z\s]{2,40}$"
+      title="Country should contain only letters." />
+  </div>
+
+  <div class="form-group mb-3">
+    <label>Street Address</label>
+    <input 
+      type="text" 
+      class="form-control" 
+      id="address" 
+      required 
+      pattern="^[A-Za-z0-9\s,.-]{5,100}$"
+      title="Address can include letters, numbers, and punctuation." />
+  </div>
+
+  <div class="form-group mb-3">
+    <label>Town/City</label>
+    <input 
+      type="text" 
+      class="form-control" 
+      id="city" 
+      required 
+      pattern="^[A-Za-z\s]{2,40}$"
+      title="City should contain only letters." />
+  </div>
+
+  <div class="form-group mb-3">
+    <label>Phone</label>
+    <input 
+      type="text" 
+      class="form-control" 
+      id="phone" 
+      required 
+      pattern="^(\+?\d{1,3}[- ]?)?\d{10}$"
+      title="Enter a valid phone number (10 digits or with country code)." />
+  </div>
+
+  <div class="form-group mb-3">
+    <label>Email Address</label>
+    <input 
+      type="email" 
+      class="form-control" 
+      id="email" 
+      required 
+      pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+      title="Enter a valid email address." />
+  </div>
+
+  <div class="form-group mb-3">
+    <label>Order Notes (Optional)</label>
+    <textarea class="form-control" id="notes" maxlength="200"></textarea>
+  </div>
+</form>
+
+    </div>
+
+    <!-- Your Order -->
+    <div class="col-md-6 order-summary">
+      <h3>Your Order</h3>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody id="orderItems">
+          <!-- Loaded by JS -->
+        </tbody>
+        <tfoot>
+          <tr>
+            <th>Subtotal</th>
+            <td id="subtotal">$0</td>
+          </tr>
+          <tr>
+            <th>Flat Rate</th>
+            <td>$5</td>
+          </tr>
+          <tr>
+            <th>Total</th>
+            <td id="totalAmount" class="text-danger fw-bold">$0</td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <div class="payment-methods mb-3">
+        <label><input type="radio" name="payment" value="Bank Transfer" checked> Direct Bank Transfer</label><br>
+        <label><input type="radio" name="payment" value="PayPal"> PayPal</label><br>
+        <label><input type="radio" name="payment" value="Cash on Delivery"> Cash on Delivery</label>
+      </div>
+
+      <div class="toast-container" id="toastContainer"></div>
+
+      <button id="placeOrder" class="btn btn-danger w-100">Place Order</button>
+    </div>
+  </div>
+</main>
+
+
+
+
+
+ <footer class="footer">
+  <div class="footer-top">
+    <div class="footer-header">
+      <div class="logo">
+        <h2><span class="brand">Khadyo</span></h2>
+        <img src="./Photos/Link.png" alt="Pizza" class="pizza-img">
+        
+      </div>
+
+      <div class="tagline">
+        <h2>Feel Hunger! Order Your <span>Like Food.</span></h2>
+      </div>
+
+      <div class="order-btn">
+        <button>Order Now</button>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="footer-content">
+      <div class="footer-box">
+        <h4>Address</h4>
+        <p>570 8th Ave, New York, NY 10018 United States</p>
+        <a href="#">View Google Map</a>
+      </div>
+
+      <div class="footer-box">
+        <h4>Book A Table</h4>
+        <p>Dogfood och Sliders foodtruck. Under Om oss kan ni läsa</p>
+        <a href="#">Make A Call</a>
+      </div>
+
+      <div class="footer-box">
+        <h4>Opening Hours</h4>
+        <p>Monday–Friday: 8am – 4pm<br>Saturday: 9am – 5pm</p>
+        <a href="#">Make A Call</a>
+      </div>
+
+      <div class="footer-box">
+        <h4>Newsletter</h4>
+        <div class="newsletter">
+          <input type="email" placeholder="Enter Your Email">
+          <button><i class="fa fa-paper-plane"></i></button>
+        </div>
+        <a href="#">Subscribe Now</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright © 2021 <span>Khadyo</span></p>
+  </div>
+</footer>
+
+
+
+  <script src="./js/Checkout_page.js"></script>
+  <script src="../node_modules/axios/dist/axios.min.js"></script>
+</body>
+</html>

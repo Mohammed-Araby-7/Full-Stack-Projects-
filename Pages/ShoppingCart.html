@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shopping Cart</title>
+
+  <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/FoodPage.css" />
+  <link rel="stylesheet" href="./css/Shopingcart.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="container-fluid header">
+    <div class="row align-items-center top-row">
+      <div class="col-md-2 logo">
+        <img src="../Photos/Link.png" alt="Logo" />
+      </div>
+
+      <nav class="col-md-7 navigator">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="col-md-2 d-flex align-items-center justify-content-end right-icons">
+        <img src="./Photos/Border.png" alt="">
+        <img src="./Photos/BR2.png" alt="">
+        <img src="./Photos/BR3.png" alt="">
+        <button class="btn-login">Login</button>
+      </div>
+    </div>
+
+    <div class="row text-center title-row">
+      <h4>Shopping Cart</h4>
+      <span>Home / Page / Shopping Cart</span>
+    </div>
+  </header>
+
+  <!-- Main Cart -->
+  <main class="container my-5">
+    <div class="cart-container">
+      <table class="table table-hover text-center align-middle">
+        <thead class="table-dark">
+          <tr>
+            <th>Image</th>
+            <th>Product</th>
+            <th>Price (EGP)</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="cart-items"></tbody>
+      </table>
+
+      <div class="cart-summary text-end mt-4">
+        <h5>Subtotal: <span id="subtotal">0.00</span> EGP</h5>
+        <h4>Total: <span id="total">0.00</span> EGP</h4>
+        <button class="btn btn-danger mt-3" id="checkoutBtn">Proceed to Checkout</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Toast Notification -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3"></div>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-header">
+      <div class="logo">
+        <h2><span class="brand">Khadyo</span></h2>
+        <img src="./Photos/Link.png" alt="Pizza" class="pizza-img">
+        
+      </div>
+
+      <div class="tagline">
+        <h2>Feel Hunger! Order Your <span>Like Food.</span></h2>
+      </div>
+
+      <div class="order-btn">
+        <button>Order Now</button>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="footer-content">
+      <div class="footer-box">
+        <h4>Address</h4>
+        <p>570 8th Ave, New York, NY 10018 United States</p>
+        <a href="#">View Google Map</a>
+      </div>
+
+      <div class="footer-box">
+        <h4>Book A Table</h4>
+        <p>Dogfood och Sliders foodtruck. Under Om oss kan ni läsa</p>
+        <a href="#">Make A Call</a>
+      </div>
+
+      <div class="footer-box">
+        <h4>Opening Hours</h4>
+        <p>Monday–Friday: 8am – 4pm<br>Saturday: 9am – 5pm</p>
+        <a href="#">Make A Call</a>
+      </div>
+
+      <div class="footer-box">
+        <h4>Newsletter</h4>
+        <div class="newsletter">
+          <input type="email" placeholder="Enter Your Email">
+          <button><i class="fa fa-paper-plane"></i></button>
+        </div>
+        <a href="#">Subscribe Now</a>
+      </div>
+    </div>
+  </div>  
+
+  <div class="footer-bottom">
+    <p>Copyright © 2021 <span>Khadyo</span></p>
+  </div>
+</footer>
+
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/ShoopingCart.js"></script>
+</body>
+</html>
